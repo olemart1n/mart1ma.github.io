@@ -13,6 +13,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: Geneva, Tahoma, sans-serif;
+    background-color: rgba(248, 212, 140, 0.292);
 }
 
 header {
@@ -20,9 +21,10 @@ header {
 }
 
 header h1 {
-    font-weight: 100;
+    font-weight: 400;
     font-style: italic;
-    border-color: antiquewhite ;
+    border-color: antiquewhite;
+    margin-top: 10px;
 }
 
 
@@ -34,9 +36,9 @@ main {
 }
 
 main div {
-    min-height: 250px;
+    min-height: 260px;
     border-radius: 5px;
-    width: 60%;
+    width: 70%;
     background-color: grey;
     margin: 1rem;
     padding: 1rem;
@@ -56,12 +58,13 @@ main div h3 {
     font-size: .7em;
 }
 main div a {
-    text-decoration: none;
     color: grey;
 }
 
 main div img{
     width: 100%;
+    height: 100px;
+    object-fit: cover;
 }
 
 footer {
@@ -74,6 +77,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     transition: ease-out .3s;
+    border-top:1px solid rgb(29, 90, 90);
 }
 
 .fade-out {
@@ -88,4 +92,16 @@ footer {
 .fa-brands {
     font-size: 1.23em;
     color: rgb(29, 90, 90);
+}
+
+@media (min-width: 700px) {
+    main div {
+        flex-direction: row;
+        min-height: 400px;
+        flex-wrap: wrap;
+    }
+    main div h2 {
+        font-size: 1.5em;
+        width: 100%;
+    }
 }
