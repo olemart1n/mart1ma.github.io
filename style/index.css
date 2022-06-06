@@ -18,6 +18,7 @@ body {
 
 header {
     text-align: center;
+    padding: 20px;
 }
 
 header h1 {
@@ -25,13 +26,14 @@ header h1 {
     font-style: italic;
     border-color: antiquewhite;
     margin-top: 10px;
+    color: rgb(242, 121, 121);
 }
 
 
 main {
     display: flex;
     flex-direction: column;
-    min-height: 100%;
+    height: 100%;
     align-items: center;
 }
 
@@ -49,6 +51,9 @@ main div {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+}
+main div:hover {
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 main div h2 {
@@ -72,7 +77,7 @@ footer {
     bottom:0;
     width:100%;
     height:40px;   /* Height of the footer */
-    background:white;
+    background:rgb(242, 121, 121);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -83,6 +88,33 @@ footer {
 .fade-out {
     animation: fade 1.1s;
 }
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.333);
+    animation: zoom 0.2s ease-in-out;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.modal figure {
+    width: 80%;
+    height: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
 
 @keyframes fade {
     0% { opacity: 1 }
@@ -92,9 +124,14 @@ footer {
 .fa-brands {
     font-size: 1.23em;
     color: rgb(29, 90, 90);
+    cursor: pointer;
 }
 
 @media (min-width: 700px) {
+
+    header {
+        text-align: center;
+    }
     main div {
         flex-direction: row;
         min-height: 400px;
@@ -102,6 +139,74 @@ footer {
     }
     main div h2 {
         font-size: 1.5em;
+        margin: 0 auto;
+    }
+    main div h3 {
+        font-size: 1em;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    main div img{
         width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    main div {
+        max-height: 1000px;
+        border-radius: 5px;
+        background-color: grey;
+        margin: 1rem;
+        background: white;
+        border: 1px solid lightgrey;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    footer {
+        position: fixed;
+        bottom: 0px;
+        width:100%;
+        height:40px;   /* Height of the footer */
+        background:rgba(242, 121, 121, .5);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        transition: ease-out .3s;
+        border-top: 0;
+    }
+    .modal {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.333);
+        animation: zoom 0.2s ease-in-out;
+    }
+    
+    @keyframes zoom {
+        from {
+            transform: scale(0);
+        }
+        to {
+            transform: scale(1);
+        }
+    }
+    .modal figure {
+        width: 80%;
+        height: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
     }
 }
