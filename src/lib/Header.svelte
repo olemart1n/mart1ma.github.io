@@ -4,7 +4,7 @@
 </script>
 
 <header>
-    <a href="main"><img src={headerTitle} alt="title with name" /></a>
+    <a href="/"><img src={headerTitle} alt="title with name" /></a>
     <a href="https://github.com/olemart1n" target="_blank">
         <img {src} class="icon" alt="github Logo" />
     </a>

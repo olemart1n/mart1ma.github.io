@@ -49,17 +49,18 @@
         text-align: center;
     }
     .intro {
-        background-color: rgba(126, 195, 230, 0.5);
-        border-radius: 5px;
         padding: 20px;
         display: grid;
         grid-template-columns: 50% 50%;
     }
     .text {
+        border-radius: 5px;
+        background-color: rgba(126, 195, 230, 0.5);
         display: flex;
         flex-direction: column;
-        align-items: self-start;
-        font-size: 1.3rem;
+        align-items: center;
+        font-size: 1.2rem;
+        padding: 2rem;
     }
     .text p {
         font-family: Arial, sans-serif;

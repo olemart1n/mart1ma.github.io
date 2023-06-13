@@ -7,18 +7,23 @@
     let visible = false;
 </script>
 
-<div class="project" on:mouseenter={() => (visible = true)} on:mouseleave={() => (visible = false)}>
+<button
+    class="project"
+    on:focus={() => (visible = true)}
+    on:mouseenter={() => (visible = true)}
+    on:mouseleave={() => (visible = false)}
+>
     <h3 class={visible ? "h3" : ""}>{name}</h3>
     <figure>
         <img src={imageSrc} alt="This project's name is {name}" />
     </figure>
     {#if visible}
-        <div class="project_links" transition:fade>
+        <div class={"project_links"} transition:fade>
             <a href={ghLink} class="anchor-button">Github</a>
             <a href={demoLink} class="anchor-button">Demo</a>
         </div>
     {/if}
-</div>
+</button>
 
 <style>
     .project {
@@ -29,6 +34,9 @@
         height: 250px;
         position: relative;
         overflow: hidden;
+
+        padding: 0;
+        border: none;
     }
     .project_links {
         position: absolute;
@@ -43,6 +51,8 @@
     h3 {
         background-color: rgb(219, 219, 219);
         text-align: center;
+        width: 100%;
+        color: var(--color-black);
     }
     .h3 {
         background-color: rgb(185, 246, 253);
