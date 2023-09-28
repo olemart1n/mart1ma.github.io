@@ -1,0 +1,1 @@
+import{H as s,s as o,m as a,a as m}from"./q-89a25abc.js";import{J as t}from"./q-22c608a5.js";const i=t(o("s_mmkmf0PwACk")),_=s(a(()=>m(()=>import("./q-8d273e95.js"),["build/q-8d273e95.js","build/q-89a25abc.js","build/q-22c608a5.js"]),"s_U3HoWm67vOc"));export{_ as default,i as useSupabaseLogin};
