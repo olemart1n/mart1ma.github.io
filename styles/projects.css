@@ -17,13 +17,15 @@
     left: 50%;
     transform: translate(-50%);
     text-align: center;
-    background-color: lightblue;
     text-decoration: none;
     background-color: black;
     border-radius: 3px;
-    color: var(--dark-text);
-    padding: 0.5rem 1rem;
+    color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0.4rem 0.8rem;
     font-size: large;
+    border: 3px solid var(--dark-text);
+    box-shadow: rgb(71, 71, 86) 3px 3px 10px;
 }
 .link-button:hover {
     background-color: lightblue;
@@ -32,6 +34,7 @@
 .project-card img {
     width: 220px;
     height: 150px;
+    border-radius: 0.5rem;
 }
 
 @media (max-width: 700px) {

@@ -9,12 +9,14 @@ class Owl {
         this.frame = 0;
         this.yFrame = 0;
         this.timer = 0;
-        this.isAttacking = false;
         this.canvasHeight = cH;
         this.canvasWidth = cW;
+        this.attacks = false;
+        this.hasRun = false;
+        this.owlEats = false;
     }
     insectAppears() {
-        // if (this.timer % 20 === 0) this.frame++
+        if (this.timer % 20 === 0) this.frame++;
         if (this.yFrame === 1 && this.frame > 9) this.yFrame = 0 & (this.frame = 0);
         if (this.yFrame === 3 && this.frame > 9) this.yFrame = 0 & (this.frame = 0);
         if (this.yFrame === 2 && this.frame > 9) this.yFrame = 0 & (this.frame = 0);
@@ -24,13 +26,28 @@ class Owl {
         }
     }
     attack(insectsInDangerZone) {
-        insectsInDangerZone > 0 ? (this.yFrame = 3) : (this.yFrame = 2);
-        this.frame = 0;
-    }
-    draw(ctx, canvasWidth, canvasHeight) {
-        this.timer++;
-        ctx.save();
+        if (this.attacks && !this.hasRun) {
+            this.hasRun = true;
+            this.frame = 0;
+        }
 
+        if (this.timer % 20 === 0) this.frame++;
+        if (insectsInDangerZone > 0) {
+            this.yFrame = 3;
+        } else {
+            this.yFrame = 2;
+        }
+        if (this.frame > 9) {
+            this.hasRun = false;
+            this.attacks = false;
+            this.owlEats = false;
+            this.yFrame = 0;
+            this.frame = 0;
+        }
+    }
+
+    draw(ctx, canvasWidth, canvasHeight) {
+        ctx.save();
         ctx.translate(canvasWidth / 2, canvasHeight / 2);
         ctx.drawImage(
             this.image,
@@ -38,22 +55,20 @@ class Owl {
             this.spriteHeight * this.yFrame + 1,
             this.spriteWidth,
             this.spriteHeight,
-            // (-this.spriteWidth * 0.8) / 2,
-            // (-this.spriteHeight * 0.8) / 2,
-            // this.spriteWidth * 0.8,
-            // this.spriteHeight * 0.8
             -this.spriteWidth * this.canvasHeight * 0.0015 * 0.5,
             -this.spriteHeight * this.canvasHeight * 0.0015 * 0.5,
             this.spriteWidth * this.canvasHeight * 0.0015,
             this.spriteHeight * this.canvasHeight * 0.0015
         );
-        if (this.timer % 20 === 0) this.frame++;
-        if (this.frame > 9 && this.yFrame > 1) this.isAttacking = false;
+
         ctx.restore();
     }
     reset() {
         this.frame = 0;
         this.yFrame = 0;
+    }
+    start() {
+        this.timer++;
     }
 }
 
