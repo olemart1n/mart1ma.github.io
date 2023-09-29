@@ -1,0 +1,44 @@
+form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.form {
+    background-color: var(--dark-text);
+    margin: auto;
+
+    height: 50%;
+    width: 90%;
+    max-width: 700px;
+    background-color: whitesmoke;
+}
+
+#message {
+    padding: 10px;
+    border: 1px solid #ccc; /* Normal border */
+    border-radius: 4px;
+    width: 80%;
+    margin: auto;
+}
+#name {
+    border: 1px solid #ccc; /* Normal border */
+    padding: 10px;
+    border-radius: 4px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 0;
+}
+
+form button {
+    background-color: var(--dark-black);
+    color: var(--dark-text);
+    max-width: 100px;
+    margin: 0.5rem auto;
+    padding: 0.5rem 1rem;
+
+    cursor: pointer;
+}
+form button:hover {
+    background-color: white;
+    color: var(--dark-black);
+}

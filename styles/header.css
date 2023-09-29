@@ -1,0 +1,29 @@
+header h1 {
+    color: var(--dark-text);
+}
+header ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    place-content: end;
+}
+ul li {
+    padding: 0 2rem;
+}
+header img {
+    background-color: var(--dark-text);
+    padding: 2px;
+    border-radius: 50%;
+    box-shadow: var(--dark-text) -10px -3 10px;
+    width: 30px;
+    height: 30px;
+}
+header a {
+    color: black;
+    text-decoration: none;
+}
+header i {
+    color: var(--dark-text);
+    padding: 0 1rem;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/global.css">
+    <title>Message</title>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li>
+                <a href="https://github.com/olemart1n">
+                    <img src="https://api.iconify.design/devicon:github.svg?color=%23888888" alt="github icon" />
+                </a>
+            </li>
+            <li>
+                <button>
+                    <a href="/index.html">
+                        back
+                    </a>
+                </button>
+            </li>
+        </ul>
+        <h1>
+            <i>Frontend developer</i>
+        </h1>
+    </header>
+    <main class="form">
+        <form>
+            <textarea rows="10" name="message" id="message" placeholder="Write here" required minLength="5"></textarea>
+
+            <input type="email" name="email" id="name" placeholder="your email" required />
+            <button type="submit">Send</button>
+        </form>
+    </main>
+    <footer>
+        <div class="container">
+            <a href="https://www.builder.io/" target="_blank" class="anchor">
+                <span>Ole Martin Snoen</span>
+                <span class="spacer">|</span>
+                <span class="footer-time">{serverTime.value.date.substring(0, 10)}</span>
+            </a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+    <script src="/js/message.js" type="module"></script>
+</body>
+
+</html>
