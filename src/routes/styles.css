@@ -1,0 +1,26 @@
+/* THIS FILE IS JUST FOR EXAMPLES, DELETE IT IF YOU DON'T NEED IT */
+
+/* SHELL ---------------------------------------- */
+.canvas-div {
+    width: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 750px) {
+    .section {
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .canvas-div {
+        max-width: 600px;
+        width: auto;
+        /*  margin: auto; */
+        margin: 1rem auto;
+    }
+}

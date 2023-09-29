@@ -1,0 +1,23 @@
+header h1 {
+    color: var(--dark-text);
+}
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    place-content: end;
+}
+ul li {
+    padding: 0 2rem;
+}
+img {
+    background-color: var(--dark-text);
+    padding: 2px;
+    border-radius: 50%;
+    box-shadow: var(--dark-text) -10px -3 10px;
+}
+i {
+    color: var(--dark-text);
+    padding: 0 1rem;
+}
