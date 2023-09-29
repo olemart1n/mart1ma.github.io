@@ -1,0 +1,1 @@
+import{H as t,m as e,_ as o}from"./q-4e2a80fc.js";const a=t(e(()=>o(()=>import("./q-d1c5260f.js"),["build/q-d1c5260f.js","build/q-4e2a80fc.js"]),"s_xYL1qOwPyDI")),s={title:"Ole Martin",meta:[{name:"description",content:"just a portfolio site"}]};export{a as default,s as head};
