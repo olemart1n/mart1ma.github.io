@@ -6,7 +6,7 @@ const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 const video = document.createElement("video");
 video.src =
-    "https://ulcxpfjjujtdnmvvzzuz.supabase.co/storage/v1/object/sign/video/bg-video2.mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9iZy12aWRlbzIubXA0IiwiaWF0IjoxNjk1NDEyMjU1LCJleHAiOjE3MjY5NDgyNTV9.tpyBQlEF0ViZDnuNKN5U_6OEx7iEwo0RInpkzkGp3cs&t=2023-09-22T19%3A50%3A55.241Z";
+    "https://uwovsfuszdmejttzyaxu.supabase.co/storage/v1/object/public/video/bg-video2.mp4?t=2023-11-27T14%3A53%3A38.452Z";
 
 const C = {
     canvasWidth: 0,
